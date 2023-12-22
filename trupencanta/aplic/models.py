@@ -193,7 +193,7 @@ class Noticia(models.Model):
     
 class Projeto(models.Model):
     nome = models.CharField(_('Nome'), max_length=100)
-    imagem = models.ImageField(upload_to='Projetos/')
+    imagem = models.ImageField(upload_to='projetos/')
     descricao = models.CharField(_('Descrição'), max_length = 155)
     resumo = models.TextField(_('Resumo'))
 

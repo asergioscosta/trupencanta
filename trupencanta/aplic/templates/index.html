@@ -62,6 +62,42 @@
     </section>
     <!-- ----- Fim Conheça a TrupEncanta ----- -->
 
+    <!-- ----- Início Projetos ----- -->
+    <section class="services section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h3 class="wow zoomIn" data-wow-delay=".2s">Projetos Culturais e Sociais</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Projetos</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">Conheça nossos projetos culturais e sociais e
+                            descubra como cada iniciativa contribui para a construção de uma comunidade mais inspiradora
+                            e inclusiva.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                {% for projeto in projeto %}
+                <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="single-service one">
+                        <div class="service-icon">
+                            <i class="lni lni-star-half"></i>
+                        </div>
+                        <br>
+                        <img src="{{ projeto.imagem.url }}" alt="{{ projeto.nome }}" class="w-100">
+                        <h3>{{ projeto.nome }}</h3>
+                        <p>
+                            {{ projeto.descricao }}
+                        </p>
+                        <a href="{% url 'saiba-mais' %}">Saiba Mais <i class="lni lni-arrow-right"></i></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- ----- Fim Projetos ----- -->
+    </section>
     {% include 'footer.html' %}
 
 </body>
