@@ -1303,7 +1303,7 @@ ol {
   font-size: 15px;
   font-weight: 500;
   padding: 16px 30px;
-  background-color: #3080E3;
+  background-color: #AB807F;
   color: #fff;
   border: none;
   -webkit-transition: all 0.3s ease;
@@ -1342,7 +1342,7 @@ ol {
 
 .button .btn:hover {
   color: #fff;
-  background-color: #fd723b;
+  background-color: #DF5E34;
 }
 
 .button {
@@ -2002,8 +2002,8 @@ ol {
 }
 
 .button .signup {
-  background-color: #DF5E34;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   padding: 10px 25px;
   border-radius: 30px;
   font-weight: 500;
@@ -2011,7 +2011,7 @@ ol {
 
 .button .signup:hover {
   color: #fff;
-  background-color: #AB807F;
+  background-color: #DF5E34;
 }
 
 .sticky .button .signin {
@@ -2028,7 +2028,7 @@ ol {
 }
 
 .sticky .button .signup:hover {
-  background-color: #AB807F;
+  background-color: #DF5E34;
   color: #fff;
 }
 
@@ -2041,7 +2041,7 @@ ol {
 }
 
 .others-pages .button .signin:hover {
-  color: #AB807F;
+  color: #DF5E34;
 }
 
 .others-pages .button .signup {
@@ -2050,7 +2050,7 @@ ol {
 }
 
 .others-pages .button .signup:hover {
-  background-color: #AB807F;
+  background-color: #DF5E34;
   color: #fff;
 }
 
@@ -2066,7 +2066,7 @@ ol {
     color: #fff;
   }
   .header .button .signup:hover {
-    background-color: #AB807F;
+    background-color: #DF5E34;
     color: #fff;
   }
 }
@@ -2100,11 +2100,12 @@ ol {
   right: calc(50% - 1180px);
   width: 1000px;
   height: 1000px;
-  background: #3080E3;
+  background: #AB807F;
   position: absolute;
   border-radius: 50%;
   z-index: 1;
 }
+
 
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .hero-area .main__circle {
@@ -2118,7 +2119,7 @@ ol {
   z-index: 2;
   width: 150px;
   height: 150px;
-  background: #FAB8C4;
+  background: #DF5E34;
   position: absolute;
   border-radius: 50%;
 }
@@ -2134,7 +2135,7 @@ ol {
   left: -180px;
   width: 350px;
   height: 350px;
-  background: #fd723b;
+  background: #AB807F;
   position: absolute;
   border-radius: 50%;
 }
@@ -2150,7 +2151,7 @@ ol {
   left: 30px;
   width: 48px;
   height: 48px;
-  background: #FAB8C4;
+  background: #DF5E34;
   position: absolute;
   border-radius: 50%;
 }
@@ -2195,7 +2196,7 @@ ol {
   left: -45px;
   width: 110px;
   height: 110px;
-  background: #FAB8C4;
+  background: #DF5E34;
   position: absolute;
   border-radius: 50%;
   z-index: -1;
