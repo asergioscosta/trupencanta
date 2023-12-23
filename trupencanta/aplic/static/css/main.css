@@ -1076,8 +1076,8 @@ ol {
   font-weight: 500;
   display: inline-block;
   margin-bottom: 20px;
-  color: #3080E3;
-  border: 2px solid #3080E3;
+  color: #DF5E34;
+  border: 2px solid #DF5E34;
   border-radius: 30px;
   padding: 8px 30px;
   text-transform: capitalize;
@@ -1303,7 +1303,7 @@ ol {
   font-size: 15px;
   font-weight: 500;
   padding: 16px 30px;
-  background-color: #AB807F;
+  background-color: #DF5E34;
   color: #fff;
   border: none;
   -webkit-transition: all 0.3s ease;
@@ -1342,7 +1342,7 @@ ol {
 
 .button .btn:hover {
   color: #fff;
-  background-color: #DF5E34;
+  background-color: #AB807F;
 }
 
 .button {
@@ -1350,7 +1350,7 @@ ol {
 }
 
 .button .btn-alt {
-  background-color: #fd723b !important;
+  background-color: #DF5E34 !important;
   color: #fff !important;
 }
 
@@ -1571,6 +1571,7 @@ ol {
     background-color: #151515;
   }
   .header .navbar-collapse {
+    
     position: absolute;
     top: 60px !important;
     left: 0;
@@ -1685,7 +1686,7 @@ ol {
 }
 
 .header.sticky .button .btn:hover {
-  background-color: #fd723b;
+  background-color: #DF5E34;
   color: #fff;
 }
 
@@ -1698,6 +1699,8 @@ ol {
   transition: all 0.3s ease-out 0s;
   top: 0;
   background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+
 }
 
 .navbar-expand-lg .navbar-nav {
@@ -2119,7 +2122,7 @@ ol {
   z-index: 2;
   width: 150px;
   height: 150px;
-  background: #DF5E34;
+  background: #EE9A61;
   position: absolute;
   border-radius: 50%;
 }
@@ -2135,7 +2138,7 @@ ol {
   left: -180px;
   width: 350px;
   height: 350px;
-  background: #AB807F;
+  background: #DF5E34;
   position: absolute;
   border-radius: 50%;
 }
@@ -2151,7 +2154,7 @@ ol {
   left: 30px;
   width: 48px;
   height: 48px;
-  background: #DF5E34;
+  background: #EE9A61;
   position: absolute;
   border-radius: 50%;
 }
@@ -2196,7 +2199,7 @@ ol {
   left: -45px;
   width: 110px;
   height: 110px;
-  background: #DF5E34;
+  background: #EE9A61;
   position: absolute;
   border-radius: 50%;
   z-index: -1;
@@ -2606,17 +2609,17 @@ ol {
 }
 
 .pricing-table .single-table.middle .table-head .title {
-  border-color: #fd723b;
-  color: #fd723b;
+  border-color: #DF5E34;
+  color: #DF5E34;
 }
 
 .pricing-table .single-table .table-head .title {
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 25px;
-  color: #3080e3;
+  color: #AB807F;
   padding: 8px 20px;
-  border: 2px solid #3080e3;
+  border: 2px solid #AB807F;
   display: inline-block;
   border-radius: 30px;
 }
@@ -2792,7 +2795,7 @@ ol {
   position: relative;
   padding: 50px;
   border-radius: 10px;
-  background-color: #3080E3;
+  background-color: #DF5E34;
   z-index: 0;
   overflow: hidden;
 }
@@ -2853,7 +2856,7 @@ ol {
 }
 
 .call-action .button .btn:hover {
-  background-color: #fd723b;
+  background-color: #343434;
   color: #fff;
 }
 
@@ -2925,7 +2928,7 @@ ol {
   line-height: 65px;
   border-radius: 15px;
   color: #fff;
-  background-color: #DF5E34;
+  background-color: #AB807F;
   text-align: center;
   font-size: 30px;
   -webkit-box-shadow: 0px 10px 30px rgba(48, 128, 227, 0.18);
