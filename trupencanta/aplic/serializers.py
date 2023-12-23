@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from aplic.models import Projeto
+from aplic.models import Projeto, Oficina
 
 class ProjetoSerializer(serializers.ModelSerializer):
     disciplinas = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='disciplina-detail')
@@ -12,4 +12,18 @@ class ProjetoSerializer(serializers.ModelSerializer):
             'imagem',
             'descricao',
             'resumo',
+        )
+
+class OficinaSerializer(serializers.ModelSerializer):
+    disciplinas = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='disciplina-detail')
+
+    class Meta:
+        model = Oficina
+        fields = (
+            'nome',
+            'imagem',
+            'descricao',
+            'resumo',
+            'dia_aulas',
+            'horario',
         )

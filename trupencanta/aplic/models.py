@@ -153,20 +153,20 @@ class Documento (models.Model):
 
 class Oficina(models.Model):
     dia_semana = (
-        ('segunda','Segunda-feira'),
-        ('terca','Terça-feira'),
-        ('quarta','Quarta-feira'),
-        ('quinta','Quinta-feira'),
-        ('sexta','Sexta-feira'),
-        ('sabado','Sábado'),
-        ('domingo','Domingo'),
+        ('Segunda-Feira','Segunda-Feira'),
+        ('Terça-Feira','Terça-Feira'),
+        ('Quarta-Feira','Quarta-Feira'),
+        ('Quinta-feira','Quinta-Feira'),
+        ('Sexta-Feira','Sexta-Feira'),
+        ('Sábado','Sábado'),
+        ('Domingo','Domingo'),
     )
 
     nome = models.CharField(_('Nome'), max_length=100)
     imagem = models.ImageField(upload_to='Projetos/')
-    descricao = models.CharField(_('Descrição'), max_length=155)
-    resumo = models.TextField(_('Resumo'))
-    dia_aulas = models.CharField(_('Dia das Aulas'), max_length=10, choices=dia_semana)
+    resumo = models.CharField(_('Resumo'), max_length=155)
+    descricao = models.TextField(_('Descrição'), help_text='Insira uma descrição detalhada aqui.\nPule linhas conforme necessário.')
+    dia_aulas = models.CharField(_('Dia das Aulas'), max_length=13, choices=dia_semana)
     horario = models.TimeField(choices=[(time(hour=h, minute=m), f"{h:02d}:{m:02d}") for h in range(8, 24) for m in range(0, 60, 30)])
 
     class Meta:

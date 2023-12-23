@@ -19,9 +19,10 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul id="nav" class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a class="dd-menu active collapsed" href="index.html" data-bs-toggle="collapse"
-                                        data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
-                                        aria-expanded="false" aria-label="Toggle navigation">Página Inicial</a>
+                                    <a class="dd-menu active collapsed" href="{% url 'index' %}"
+                                        data-bs-toggle="collapse" data-bs-target="#submenu-1-1"
+                                        aria-controls="navbarSupportedContent" aria-expanded="false"
+                                        aria-label="Toggle navigation">Página Inicial</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
@@ -29,7 +30,7 @@
                                         aria-expanded="false" aria-label="Toggle navigation">Sobre Nós</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" aria-label="Toggle navigation">Oficinas</a>
+                                    <a href="{% url 'oficina' %}" aria-label="Toggle navigation">Oficinas</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" aria-label="Toggle navigation">Projetos</a>
@@ -46,6 +47,7 @@
                             <div class="button">
                                 <a href="#" class="signup">Acessar</a>
                             </div>
+                        </div>
                     </nav>
                 </div>
             </div>

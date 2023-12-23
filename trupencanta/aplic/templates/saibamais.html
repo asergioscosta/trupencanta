@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Saiba Mais</title>
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    <meta name="author" content="Augusto Sérgio">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/logo/trupencanta.png' %}" />
+
+    <!-- ----- Start CSS ----- -->
+    <link rel="stylesheet" href="{% static '/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/glightbox.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/LineIcons.3.0.css' %}">
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <link rel="stylesheet" href="{% static '/css/tiny-slider.css' %}">
+    <!-- ----- End CSS ----- -->
+
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+    <!-- Start Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="breadcrumbs-content">
+                        <h1 class="page-title">{{oficina.nome}}</h1>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <ul class="breadcrumb-nav">
+                        <li><a href="{% url 'index' %}">Página Inicial</a></li>
+                        <li>{{oficina.nome}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- ----- Start Section Description ----- -->
+    <section class="section blog-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 col-12">
+                    <div class="single-inner">
+                        <div class="post-details">
+                            <div class="main-content-head">
+                                <div class="meta-information">
+                                    <h3 class="post-title">{{oficina.nome}}
+                                    </h3>
+                                    <p class="with-margin"></p>
+                                    <div class="post-thumbnils">
+                                        <img src="{{ oficina.imagem.url }}" alt="{{ oficina.nome }}">
+                                    </div>
+                                    <p class="with-margin">
+                                    <div class="detail-inner">
+                                        </p>
+                                        <p>
+                                            {{oficina.descricao}}
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+
+</body>
+
+</html>
