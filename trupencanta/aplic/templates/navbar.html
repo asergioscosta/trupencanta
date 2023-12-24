@@ -8,7 +8,9 @@
             <div class="col-lg-12">
                 <div class="nav-inner">
                     <nav class="navbar navbar-expand-lg">
-                        <img src="{% static 'images/logo/logo2.png' %}">
+                        <a href="{% url 'index' %}">
+                            <img src="{% static 'images/logo/logo2.png' %}">
+                        </a>
                         <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -19,10 +21,12 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul id="nav" class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a class="dd-menu active collapsed" href="{% url 'index' %}"
-                                        data-bs-toggle="collapse" data-bs-target="#submenu-1-1"
-                                        aria-controls="navbarSupportedContent" aria-expanded="false"
-                                        aria-label="Toggle navigation">Página Inicial</a>
+                                    <a href="{% url 'index' %}" class="dd-menu active collapsed">
+                                        <div class="dd-menu active collapsed" data-bs-toggle="collapse"
+                                            data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent"
+                                            aria-expanded="false" aria-label="Toggle navigation">Página Inicial
+                                        </div>
+                                    </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
@@ -34,6 +38,12 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" aria-label="Toggle navigation">Projetos</a>
+                                    <ul class="sub-menu collapse" id="submenu-1-2">
+                                        <li class="nav-item"><a href="{% url 'projeto-estacao-cultural' %}">Projeto
+                                                Estação Cultural</a></li>
+                                        <li class="nav-item"><a href="pricing.html">Projeto Circuito Cultural</a></li>
+                                        <li class="nav-item"><a href="pricing.html">Estação Trupe Solidária</a></li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
@@ -41,7 +51,7 @@
                                         aria-expanded="false" aria-label="Toggle navigation">Notícias</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" aria-label="Toggle navigation">Contato</a>
+                                    <a href="{% url 'contato' %}" aria-label="Toggle navigation">Contato</a>
                                 </li>
                             </ul>
                             <div class="button">

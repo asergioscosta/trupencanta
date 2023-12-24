@@ -48,45 +48,46 @@
     </div>
     <!-- ----- End Breadcrumbs ----- -->
 
-    <!-- ----- Start Section Oficinas ----- -->
+    <!-- ----- Start Oficinas ----- -->
     <section class="services style2 section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h3 class="wow zoomIn" data-wow-delay=".2s"
-                            style="visibility: visible; animation-delay: 0.2s; animation-name: zoomIn;">Oficinas</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s"
-                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Oficinas</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s"
-                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">Em nossas oficinas, disponibilizamos aos alunos um método de ensino personalizado e exclusivo,
-                            direcionado ao interesse musical, conhecimento, repertório, idade, entre outros.</p>
+                        <h3 class="wow zoomIn" data-wow-delay=".2s">Oficinas</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Oficinas</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">Em nossas oficinas, disponibilizamos aos alunos um
+                            método de ensino personalizado e exclusivo, direcionado ao interesse musical, conhecimento,
+                            repertório, idade, entre outros.</p>
                     </div>
                 </div>
             </div>
 
             <div class="row">
                 {% for oficina in oficina %}
-                <div class="col-lg-4 col-md-6 col-12  wow fadeInUp" data-wow-delay=".4s"
-                    style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                    <div class="single-service">
-                        <div class="service-icon">
-                            <i class="lni lni-graduation"></i>
-                        </div><br>
-                        <img src="{{ oficina.imagem.url }}" alt="{{ oficina.nome }}" class="w-100"><br>
-                        <h3>{{oficina.nome}}</h3>
-                        <p>
-                            {{oficina.resumo}}
-                        </p>
-                        <a href="{% url 'saibamais' oficina.id  %}">Saiba Mais <i class="lni lni-arrow-right"></i></a>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-blog-grid">
+                        <div class="blog-img">
+                            <a href="{% url 'saibamais' oficina.id %}">
+                                <img src="{{ oficina.imagem.url }}" alt="{{ projeto.nome }}">
+                            </a>
+                        </div>
+                        <div class="blog-content">
+                            <a class="category" href="javascript:void(0)">{{oficina.area}}</a>
+                            <h4>
+                                <a href="{% url 'saibamais' oficina.id %}">{{ oficina.nome }}</a>
+                            </h4>
+                            <p>{{ oficina.resumo }}</p>
+                            <a href="{% url 'saibamais' oficina.id %}" class="more-btn">Saiba Mais <i
+                                    class="lni lni-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
     </section>
-    <!-- ----- End Section Oficinas ----- -->
-
+    <!-- ----- End Oficinas ----- -->
 
     {% include 'footer.html' %}
 

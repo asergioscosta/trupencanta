@@ -165,6 +165,7 @@ class Oficina(models.Model):
     nome = models.CharField(_('Nome'), max_length=100)
     imagem = models.ImageField(upload_to='Projetos/')
     resumo = models.CharField(_('Resumo'), max_length=155)
+    area = models.TextField(_('Área da Oficina'), help_text='Insira a área da oficina, como Artes cênicas, canto')
     descricao = models.TextField(_('Descrição'), help_text='Insira uma descrição detalhada aqui.\nPule linhas conforme necessário.')
     dia_aulas = models.CharField(_('Dia das Aulas'), max_length=13, choices=dia_semana)
     horario = models.TimeField(choices=[(time(hour=h, minute=m), f"{h:02d}:{m:02d}") for h in range(8, 24) for m in range(0, 60, 30)])

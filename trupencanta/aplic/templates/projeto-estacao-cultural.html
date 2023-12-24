@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Projeto Estação Cultural</title>
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    <meta name="author" content="Augusto Sérgio">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/logo/trupencanta.png' %}" />
+
+    <!-- ----- Start CSS ----- -->
+    <link rel="stylesheet" href="{% static '/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/glightbox.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/LineIcons.3.0.css' %}">
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <link rel="stylesheet" href="{% static '/css/tiny-slider.css' %}">
+    <!-- ----- End CSS ----- -->
+
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+    <!-- ----- Start Breadcrumbs ----- -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="breadcrumbs-content">
+                        <h1 class="page-title">Projeto Estação Cultural</h1>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <ul class="breadcrumb-nav">
+                        <li><a href="{% url 'index' %}">Página Inicial</a></li>
+                        <li>Projeto Estação Cultural</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----- End Breadcrumbs ----- -->
+
+    <!-- Start Process Area -->
+    <section class="process section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12 wow fadeInLeft" data-wow-delay=".4s"
+                    style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                    <img src="{% static '/images/4.jpeg' %}" alt="#"><br><br>
+                    <img src="{% static '/images/5.jpeg' %}" alt="#">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="content">
+                        <h4 class="wow fadeInUp" data-wow-delay=".2s"
+                            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">Sobre o Projeto</h4>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s"
+                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Projeto Estação<br>Cultural</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s"
+                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                            A Estação Cultural TrupEncanta é um projeto cujo objetivo é incentivar a formação artística
+                            e cultural de pessoas de todas as idades, incluindo crianças, jovens e adultos. Nós
+                            oferecemos aulas de teatro, música, dança, artesanato, desenho, literatura e edição de
+                            vídeo. Nosso projeto está localizado no morro Nossa Senhora da Conceição, em Além Paraíba, e
+                            busca promover a transversalidade e a interdisciplinaridade da cultura, visando o
+                            desenvolvimento social.
+</p>
+                        <p>
+                            Um dos principais enfoques da Estação Cultural é ressaltar a importância da experiência
+                            prática com a arte em todas as etapas da vida, desde a infância até a vida adulta.
+                            Reconhecemos que o contato com a arte é essencial para o desenvolvimento humano e social de
+                            todas as pessoas. Por essa razão, nosso objetivo é contribuir para a inclusão social de
+                            crianças, jovens e adultos por meio de práticas educativas, capacitação profissional,
+                            atividades culturais, assistência social, saúde pública, esporte, lazer e entretenimento.
+                        </p>
+                        <p>
+                            Valorizamos a abordagem interdisciplinar, que permite aos participantes explorar as conexões
+                            entre diferentes formas de expressão artística e entre a arte e outros aspectos da vida.
+                            Acreditamos que a cultura desempenha um papel fundamental na formação integral das pessoas,
+                            não apenas estimulando a criatividade e a expressão individual, mas também promovendo o
+                            desenvolvimento pessoal, o pensamento crítico e o senso de comunidade.
+                        </p>
+                        <p>
+                            Por meio de nossas atividades, buscamos oferecer oportunidades significativas para que as
+                            pessoas desenvolvam suas habilidades, explorem seu potencial artístico e se tornem membros
+                            ativos e engajados em suas comunidades. Nossa visão é criar um ambiente acolhedor e
+                            inclusivo, onde a arte seja acessível a todos, independentemente de sua origem ou condição
+                            socioeconômica.
+                        </p>
+                        <p>
+                            A Estação Cultural TrupEncanta está empenhada em fazer a diferença na vida das pessoas,
+                            proporcionando um espaço onde a educação, a cultura e o desenvolvimento social se
+                            entrelaçam. Através de nosso trabalho, esperamos contribuir para um mundo mais rico em
+                            diversidade cultural, criatividade e inclusão social.
+                        </p>
+
+                        <div class="list">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="single-list wow fadeInUp" data-wow-delay=".8s"
+                                        style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
+                                        <div class="list-icon">
+                                            <i class="lni lni-users"></i>
+                                        </div>
+                                        <h4>Amazing Partners</h4>
+                                        <p>Quis autem vel eum reprehenderit</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <div class="single-list wow fadeInUp" data-wow-delay="1s"
+                                        style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
+                                        <div class="list-icon">
+                                            <i class="lni lni-bolt-alt"></i>
+                                        </div>
+                                        <h4>Finalize &amp; Publish</h4>
+                                        <p>Quis autem vel eum reprehenderit</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+
+</body>
+
+</html>

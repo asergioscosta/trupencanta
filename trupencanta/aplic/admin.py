@@ -21,7 +21,7 @@ class NoticiaAdmin(admin.ModelAdmin):
 
 @admin.register(Oficina)
 class OficinaAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'descricao', 'resumo', 'horario', 'dia_aulas')
+    list_display = ('nome', 'descricao', 'resumo', 'area', 'horario', 'dia_aulas')
     
 @admin.register(Professor)
 class ProfessorAdmin(admin.ModelAdmin):
