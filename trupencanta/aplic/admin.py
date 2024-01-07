@@ -17,7 +17,7 @@ class InstituicaoAdmin(admin.ModelAdmin):
 
 @admin.register(Noticia)
 class NoticiaAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'data_publicacao', 'data_evento', 'descricao', 'texto_noticia') 
+    list_display = ('titulo', 'imagem', 'resumo', 'area', 'data_publicacao', 'data_evento', 'texto_noticia') 
 
 @admin.register(Oficina)
 class OficinaAdmin(admin.ModelAdmin):

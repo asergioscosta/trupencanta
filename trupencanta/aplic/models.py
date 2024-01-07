@@ -180,9 +180,10 @@ class Oficina(models.Model):
 class Noticia(models.Model):
     titulo = models.CharField(_('Título'), max_length=255)
     imagem = models.ImageField(upload_to='Noticias/')
+    resumo = models.CharField(_('Resumo'), max_length=155)
+    area = models.TextField(_('Área da Oficina'), help_text='Insira a área da Notícia, como Artes cênicas, canto')
     data_publicacao = models.DateField(_('Data da Publicação'))
     data_evento = models.DateField(_('Data do Evento'))
-    descricao = models.CharField(_('Descrição'), max_length = 155)
     texto_noticia = models.TextField(_('Texto'))
 
     class Meta:

@@ -2791,7 +2791,7 @@ ol {
 }
 
 .call-action.style2 {
-  background-color: #574138;
+  background-color: #F4F7FA;
   padding: 0;
 }
 
@@ -3071,7 +3071,7 @@ ol {
 }
 
 .single-blog-grid .blog-content h4 a:hover {
-  color: #3080E3;
+  color: #DF5E34;
 }
 
 .single-blog-grid .blog-content p {
@@ -4232,7 +4232,7 @@ sidebar */
   overflow: hidden;
   padding: 40px;
   border-radius: 8px;
-  background-color: #413E65;
+  background-color: #574138;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
@@ -4598,6 +4598,11 @@ sidebar */
 /*=============================
 	About App CSS
 ===============================*/
+
+.achievement {
+  background-color: #F4F7FA;
+}
+
 @media (max-width: 767px) {
   .achievement .single-achievement {
     padding: 20px 0;
@@ -4854,6 +4859,7 @@ sidebar */
 /*======================================
     Process Area CSS
 ========================================*/
+
 .process img {
   width: 100%;
 }

@@ -1,9 +1,9 @@
 from django.views.generic import TemplateView
 from django.utils.translation import gettext as _
 from django.db.models import Q
-from aplic.serializers import ProjetoSerializer, OficinaSerializer
+from aplic.serializers import ProjetoSerializer, OficinaSerializer, NoticiaSerializer
 from rest_framework import viewsets, permissions
-from .models import Projeto, Oficina
+from .models import Projeto, Oficina, Noticia
 from django.shortcuts import render
 from .forms import ContatoForm
 from django.contrib import messages
@@ -23,7 +23,6 @@ class IndexView(TemplateView):
         
         if (query is None):
             context['projeto'] = Projeto.objects.order_by('id').all()
-            print('não tinha nada digitado no iptText')
         else:
             context['projeto'] = Projeto.objects.filter(Q(nome_curso__icontains=query))
             context['projeto'] = Projeto.objects.filter(Q(descricao__icontains=query))
@@ -47,7 +46,6 @@ class OficinaView(TemplateView):
         
         if (query is None):
             context['oficina'] = Oficina.objects.order_by('id').all()
-            print('não tinha nada digitado no iptText')
         else:
             context['oficina'] = Oficina.objects.filter(Q(nome__icontains=query))
             context['oficina'] = Oficina.objects.filter(Q(descricao__icontains=query))
@@ -84,3 +82,32 @@ def saibamais(request, oficina_id):
 
 class ProjetoEstacaoCulturalView(TemplateView):
     template_name = 'projeto-estacao-cultural.html'
+
+class NoticiaView(TemplateView):
+    template_name = 'noticias.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(NoticiaView, self).get_context_data(**kwargs)
+        
+        query = self.request.GET.get("iptText")
+        print(query)
+        
+        if (query is None):
+            context['noticia'] = Noticia.objects.order_by('id').all()
+        else:
+            context['noticia'] = Noticia.objects.filter(Q(nome__icontains=query))
+            context['noticia'] = Noticia.objects.filter(Q(descricao__icontains=query))
+    
+        context['latest_posts'] = Noticia.objects.order_by('-data_publicacao')[:3]
+
+        return context
+    
+class NoticiaViewSet(viewsets.ModelViewSet):
+    permission_classes = (permissions.DjangoModelPermissions, )
+
+    queryset = Noticia.objects.all()
+    serializer_class = NoticiaSerializer
+
+def continuealer(request, noticia_id):
+    noticia = Noticia.objects.get(pk=noticia_id)
+    return render(request, 'continue-a-ler.html', {'noticia': noticia})
