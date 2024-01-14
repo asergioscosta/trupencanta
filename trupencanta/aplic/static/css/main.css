@@ -2955,7 +2955,7 @@ ol {
 }
 
 .single-service a {
-  color: #574138;
+  color: #DF5E34;
   margin-top: 40px;
   display: inline-block;
   font-weight: 500;
@@ -3018,13 +3018,19 @@ ol {
 
 /* Single Blog Grid*/
 .single-blog-grid {
+  background-color: transparent;
   margin-top: 30px;
   border-radius: 8px;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 0px 10px #00000013;
-          box-shadow: 0px 0px 10px #00000013;
-  border-radius: 18px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #eaeaea;
   padding: 12px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.single-blog-grid:hover {
+  background-color: #fff;
 }
 
 .single-blog-grid .blog-img {
@@ -4599,6 +4605,7 @@ sidebar */
 	About App CSS
 ===============================*/
 
+
 .achievement {
   background-color: #F4F7FA;
 }
@@ -4807,7 +4814,7 @@ sidebar */
 }
 
 .about .why-choose-list li:hover .number {
-  background-color: #fd723b;
+  background-color: #574138;
 }
 
 .about .why-choose-list li:last-child {
@@ -4827,7 +4834,7 @@ sidebar */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #3080E3;
+  background-color: #DF5E34;
   color: #fff;
   position: absolute;
   left: 0;
