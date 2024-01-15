@@ -68,10 +68,21 @@
                                     <div class="detail-inner">
                                         </p>
                                         <p>
-                                            {{oficina.descricao}}
+                                            {{oficina.descricao|linebreaks}}
                                         </p>
                                     </div>
 
+                                    <blockquote>
+                                        <div class="icon">
+                                            <i class="lni lni-support"></i>
+                                        </div>
+                                        <h4>Dia das Aulas:</h4>
+                                        <span>-{{oficina.dia_aulas}}</span><br>
+
+                                        <h4>Horário das Aulas:</h4>
+                                        <span>-{{oficina.horario}}</span>
+                                    </blockquote>
+                                    
                                     <!-- ----- Start Comment Form ----- -->
                                     <div class="comment-form">
                                         <h3 class="comment-reply-title">Deixe seu Comentário</h3>
@@ -117,6 +128,20 @@
             </div>
         </div>
     </section>
+
+        <!-- ----- Start Parcerias ----- -->
+        <div class="client-logo">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-3 col-12 text-center">
+                        <div class="single-logo">
+                            <img src="{% static '/images/logo/logo-gerando-falcoes.png' %}" alt="Gerando Falcões">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----- End Parcerias  ----- -->
 
     {% include 'footer.html' %}
 

@@ -67,7 +67,7 @@
                                     <h4>
                                         <a href="{% url 'continue-a-ler' noticia.id %}">{{noticia.titulo}}</a>
                                     </h4>
-                                    <p>{{ noticia.resumo }}</p>
+                                    <p>{{ noticia.resumo|linebreaks}}</p>
                                     <a href="{% url 'continue-a-ler' noticia.id %}" class="more-btn">Continue a Ler <i
                                             class="lni lni-arrow-right"></i></a>
                                 </div>
@@ -80,11 +80,11 @@
                     <!-- Pagination -->
                     <div class="pagination left">
                         <ul class="pagination-list">
-                            <li><a href="javascript:void(0)">Prev</a></li>
+                            <li><a href="javascript:void(0)">Anterior</a></li>
                             <li class="active"><a href="javascript:void(0)">2</a></li>
                             <li><a href="javascript:void(0)">3</a></li>
                             <li><a href="javascript:void(0)">4</a></li>
-                            <li><a href="javascript:void(0)">Next</a></li>
+                            <li><a href="javascript:void(0)">Próxima</a></li>
                         </ul>
                     </div>
                     <!--/ End Pagination -->
@@ -93,9 +93,9 @@
                     <div class="sidebar">
                         <!-- Start Single Widget -->
                         <div class="widget search-widget">
-                            <h5 class="widget-title">Search This Site</h5>
+                            <h5 class="widget-title">Buscar</h5>
                             <form action="#">
-                                <input type="text" placeholder="Search ...">
+                                <input type="text" placeholder="Buscar">
                                 <button type="submit"><i class="lni lni-search-alt"></i></button>
                             </form>
                         </div>
