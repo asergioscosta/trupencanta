@@ -111,3 +111,6 @@ class NoticiaViewSet(viewsets.ModelViewSet):
 def continuealer(request, noticia_id):
     noticia = Noticia.objects.get(pk=noticia_id)
     return render(request, 'continue-a-ler.html', {'noticia': noticia})
+
+class SobreNosView(TemplateView):
+    template_name = 'sobre-nos.html'

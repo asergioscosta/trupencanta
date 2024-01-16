@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ContatoView, continuealer, IndexView, NoticiaView, OficinaView, ProjetoEstacaoCulturalView, saibamais 
+from .views import ContatoView, continuealer, IndexView, NoticiaView, OficinaView, ProjetoEstacaoCulturalView, saibamais, SobreNosView
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -12,4 +12,5 @@ urlpatterns = [
     path('noticias/', NoticiaView.as_view(), name ='noticia' ),
     path('oficina/', OficinaView.as_view(), name ='oficina' ),
     path('saibamais/<int:oficina_id>/', saibamais, name='saibamais'),
+    path('sobre-nos/', SobreNosView.as_view(), name='sobre-nos'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

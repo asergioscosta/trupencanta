@@ -1093,7 +1093,6 @@ blockquote span {
   border: 2px solid #DF5E34;
   border-radius: 30px;
   padding: 8px 30px;
-  text-transform: capitalize;
 }
 
 .section-title h2 {
@@ -2292,7 +2291,7 @@ blockquote span {
 }
 
 .hero-area .hero-content h1 span.color2 {
-  color: #DF5E34;
+  color: #AB807F;
 }
 
 .hero-area .hero-content p {
@@ -2395,7 +2394,7 @@ blockquote span {
   right: calc(50% - 1145px);
   width: 1000px;
   height: 1000px;
-  background: #3080E3;
+  background: #DF5E34;
   position: absolute;
   border-radius: 50%;
   z-index: 1;
@@ -4609,12 +4608,6 @@ sidebar */
 /*=============================
 	About App CSS
 ===============================*/
-
-
-.achievement {
-  background-color: #fff;
-}
-
 @media (max-width: 767px) {
   .achievement .single-achievement {
     padding: 20px 0;
@@ -4665,7 +4658,7 @@ sidebar */
 ========================================*/
 .about {
   position: relative;
-  background-color: #151515;
+  background-color: #fff;
   z-index: 0;
 }
 
@@ -5175,33 +5168,25 @@ sidebar */
 
 .team .single-team {
   margin-top: 30px;
-  border: 1px solid #eee;
   border-radius: 8px;
   overflow: hidden;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-}
-
-.team .single-team:hover {
-  -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.048);
-          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.048);
+  text-align: center;
 }
 
 .team .single-team img {
-  width: 100%;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #eee;
 }
 
 .team .single-team .content {
   padding: 40px 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media (max-width: 767px) {
@@ -5213,16 +5198,26 @@ sidebar */
 }
 
 .team .single-team .content h4 {
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .team .single-team .content h4 span {
   color: #727272;
   font-size: 14px;
   display: block;
-  margin-top: 5px;
-  font-weight: 400;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.team .single-team .content .social {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 @media (max-width: 767px) {
@@ -5233,27 +5228,26 @@ sidebar */
 
 .team .single-team .content .social li {
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 20px;
 }
 
 .team .single-team .content .social li a {
-  height: 38px;
-  width: 38px;
-  line-height: 38px;
-  text-align: center;
-  display: inline-block;
-  border: 1px solid #eee;
-  border-radius: 50%;
-  font-size: 14px;
-  color: #151515;
+  font-size: 15px;
+  color: #081828;
 }
 
 .team .single-team .content .social li a:hover {
   border-color: transparent;
-  color: #fff;
-  background-color: #3080E3;
+  color: #DF5E34;
 }
 
 .team .single-team .content .social li:last-child {
   margin-right: 0;
+}
+
+.team .single-team:hover .social {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }
