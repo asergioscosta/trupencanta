@@ -99,24 +99,24 @@
                     </div>
                 </div>
             </div>
-                <div class="row">
-                    {% for projeto in projeto %}
-                    <div class="col-lg-4 col-md-6 col-12  wow fadeInUp" data-wow-delay=".4s"
-                        style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                        <div class="single-service one">
-                            <div class="service-icon">
-                                <i class="lni lni-network"></i>
-                            </div>
-                            <h3>{{ projeto.nome }}</h3>
-                            <p>
-                                {{ projeto.descricao }}
-                            </p>
-                            <a href="#">Saiba Mais <i class="lni lni-arrow-right"></i></a>
+            <div class="row">
+                {% for projeto in projeto %}
+                <div class="col-lg-4 col-md-6 col-12  wow fadeInUp" data-wow-delay=".4s"
+                    style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                    <div class="single-service one">
+                        <div class="service-icon">
+                            <i class="lni lni-network"></i>
                         </div>
+                        <h3>{{ projeto.nome }}</h3>
+                        <p>
+                            {{ projeto.descricao }}
+                        </p>
+                        <a href="{% url 'saibamais' projeto.id %}">Saiba Mais <i class="lni lni-arrow-right"></i></a>
                     </div>
-                    {% endfor %}
                 </div>
+                {% endfor %}
             </div>
+        </div>
     </section>
     <!-- ----- End Section Projetos ----- -->
 
@@ -136,9 +136,12 @@
                             style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
                             Notícias<br>TrupEncanta</h2>
                         <p class="wow fadeInUp" data-wow-delay=".6s"
-                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">Acompanhe as
-                            últimas notícias da TrupEncanta e fique por dentro de nossas atividades, projetos e
-                            oficinas.</p>
+                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">Fique por
+                            dentro das últimas notícias, eventos e histórias da TrupEncanta.</p>
+                        <p>
+                            Nossa seção de notícias oferece uma visão exclusiva dos bastidores, detalhes e atualizações
+                            sobre os projetos e eventos mais recentes.
+                        </p>
                         <div class="list">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -147,8 +150,8 @@
                                         <div class="list-icon">
                                             <i class="lni lni-invention"></i>
                                         </div>
-                                        <h4>Momentos Inspiradores</h4>
-                                        <p>que moldam nossa jornada</p>
+                                        <h4>Nos Palcos e Além</h4>
+                                        <p>Saiba mais sobre como contribuimos para a comunidade. </p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -157,8 +160,8 @@
                                         <div class="list-icon">
                                             <i class="lni lni-network"></i>
                                         </div>
-                                        <h4>Atividades e Eventos</h4>
-                                        <p>que nos conectam com a Comunidade</p>
+                                        <h4>Projetos Futuros</h4>
+                                        <p>Acompanhe os projetos futuros da TrupEncanta.</p>
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +173,7 @@
     </section>
     <!-- ----- End Process Noticias ----- -->
 
-    <!-- ----- Start About Oficina ----- -->
+    <!-- ----- Start Oficina ----- -->
     <section class="about section">
         <div class="shape-1">
             <img src="https://demo.graygrids.com/themes/blink/assets/images/about/shape1.svg" alt="#">
@@ -183,22 +186,50 @@
                 <div class="col-lg-6 col-12">
                     <div class="content">
                         <h4 class="wow fadeInUp" data-wow-delay=".2s"
-                            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">Oficinas</h4>
+                            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">Oficinas
+                        </h4>
                         <h2 class="wow fadeInUp" data-wow-delay=".4s"
-                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Oficinas
-                            TrupEncanta</h2>
+                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">We Provide
+                            Best Digital Marketing Solutions</h2>
                         <p class="wow fadeInUp" data-wow-delay=".6s"
-                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">Conheça nossas
-                            Oficinas e descubra oportunidades práticas de aprendizado e desenvolvimento. </p>
-                        <div class="action-button wow fadeInUp" data-wow-delay=".8s"
-                            style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
-                            <div class="btn-icon">
-                                <i class="lni lni-bolt"></i>
-                            </div>
-                            <h4>Junte-se a Nós
-                                <a href="javascript:void(0)">Saiba Mais <i class="lni lni-arrow-right"></i></a>
-                            </h4>
-                        </div>
+                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">Corporate
+                            headquarters is the part of a corporate
+                            structure that
+                            deals with important tasks such as strategic planning.</p>
+                        <ul class="why-choose-list">
+                            <li class="wow fadeInUp" data-wow-delay=".7s"
+                                style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
+                                <span class="number">1</span>
+                                <div class="list-content">
+                                    <h3>Compromisso com a Excelência</h3>
+                                    <p>
+                                        Temos um compromisso contínuo com a excelência acadêmica, buscando sempre
+                                        aprimorar nossos métodos e garantir um ensino de qualidade
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="wow fadeInUp" data-wow-delay=".8s"
+                                style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
+                                <span class="number">2</span>
+                                <div class="list-content">
+                                    <h3>Time Dedicado</h3>
+                                    <p>
+                                        Nossos professores são dedicados e estão sempre prontos para orientar e auxiliar
+                                        os alunos em cada etapa do seu caminho de aprendizado. </p>
+                                </div>
+                            </li>
+                            <li class="wow fadeInUp" data-wow-delay=".9s"
+                                style="visibility: visible; animation-delay: 0.9s; animation-name: fadeInUp;">
+                                <span class="number">3</span>
+                                <div class="list-content">
+                                    <h3>Feedback Construtivo</h3>
+                                    <p>
+                                        Valorizamos o feedback construtivo, proporcionando uma comunicação aberta entre
+                                        alunos e professores para promover um ambiente de aprendizado colaborativo.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-lg-6 col-12 wow fadeInRight" data-wow-delay=".4s"
@@ -208,9 +239,9 @@
             </div>
         </div>
     </section>
-    <!-- ----- End About Oficina ----- -->
+    <!-- ----- End Oficina ----- -->
 
-    <!-- ----- Start Section Missão, Visão e Valores ----- -->
+    <!-- ----- Start Missão, Visão e Valores ----- -->
     <section id="pricing" class="pricing-table section">
         <div class="container">
             <div class="row">
@@ -297,103 +328,24 @@
     </section>
     <!-- ----- End Section Missão, Visão e Valores ----- -->
 
-
-    <section class="team section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h3 class="wow zoomIn" data-wow-delay=".2s"
-                            style="visibility: visible; animation-delay: 0.2s; animation-name: zoomIn;">Equipe</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s"
-                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Conheça nossa
-                            Equipe</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s"
-                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">There are many
-                            variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".4s"
-                    style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                    <!-- Start Single Team -->
-                    <div class="single-team">
-                        <div class="team-image">
-                            <img src="assets/images/team/team1.jpg" alt="#">
-                        </div>
-                        <div class="content">
-                            <h4>Augusto Sérgio
-                                <span>Marketing e TI</span>
-                            </h4>
-                            <ul class="social">
-                                <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Single Team -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".6s"
-                    style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-                    <!-- Start Single Team -->
-                    <div class="single-team">
-                        <div class="team-image">
-                            <img src="assets/images/team/team2.jpg" alt="#">
-                        </div>
-                        <div class="content">
-                            <h4>John Smith
-                                <span>Digital Marketer</span>
-                            </h4>
-                            <ul class="social">
-                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Single Team -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".8s"
-                    style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
-                    <!-- Start Single Team -->
-                    <div class="single-team">
-                        <div class="team-image">
-                            <img src="assets/images/team/team3.jpg" alt="#">
-                        </div>
-                        <div class="content">
-                            <h4>Amion Doe
-                                <span>Web Developer</span>
-                            </h4>
-                            <ul class="social">
-                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Single Team -->
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ----- Start Call Contato ----- -->
-    <section class="call-action">
+    <section class="call-action style2">
         <div class="container">
             <div class="inner-content">
-                <img class="bg-shape" src="assets/images/call-action/bg-shape.svg" alt="#">
+                <img class="bg-shape" src="{% static '/assets/images/call-action/bg-shape.svg' %}" alt="#">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-8 col-12">
+                    <div class="col-lg-6 col-md-7 col-12">
                         <div class="text">
-                            <h2>Ready to dive in? <br> Start your free trial today.</h2>
+                            <h2>Ready to dive in?
+                                <br> Start your free trial today.
+                            </h2>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-4 col-12">
+                    <div class="col-lg-6 col-md-5 col-12">
                         <div class="button">
                             <a href="pricing.html" class="btn">Get started
+                            </a>
+                            <a href="about-us.html" class="btn btn-alt">Learn More
                             </a>
                         </div>
                     </div>

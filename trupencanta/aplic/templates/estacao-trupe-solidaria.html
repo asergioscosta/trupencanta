@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Estação Trupe Solidária</title>
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    <meta name="author" content="Augusto Sérgio">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/logo/trupencanta.png' %}" />
+
+    <!-- ----- Start CSS ----- -->
+    <link rel="stylesheet" href="{% static '/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/glightbox.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/LineIcons.3.0.css' %}">
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <link rel="stylesheet" href="{% static '/css/tiny-slider.css' %}">
+    <!-- ----- End CSS ----- -->
+
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+    <!-- ----- Start Breadcrumbs ----- -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="breadcrumbs-content">
+                        <h1 class="page-title">Estação Trupe Solidária</h1>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <ul class="breadcrumb-nav">
+                        <li><a href="{% url 'index' %}">Página Inicial</a></li>
+                        <li>Estação Trupe Solidária</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----- End Breadcrumbs ----- -->
+
+    <!-- ----- Start Process Area ----- -->
+    <section class="process section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12 wow fadeInLeft" data-wow-delay=".4s"
+                    style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                    <img src="{% static '/images/6.jpeg' %}" alt="#"><br><br>
+                    <img src="{% static '/images/7.jpg' %}" alt="#">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="content">
+                        <h4 class="wow fadeInUp" data-wow-delay=".2s"
+                            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">Sobre o
+                            Projeto</h4>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s"
+                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Estação
+                            Trupe<br>Solidária</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s"
+                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                            O Projeto Estação Trupe Solidária tem como objetivo principal oferecer assistência às
+                            famílias em situação de vulnerabilidade social que residem no Morro da Nossa Senhora da
+                            Conceição e áreas adjacentes, em Além Paraíba, MG. Buscamos fornecer cestas básicas,
+                            vale-gás e outros tipos de benefícios que possam ser concedidos.
+                        </p>
+                        <p>
+                            Além disso, promovemos a distribuição de brindes e brinquedos em datas especiais, como
+                            páscoa,dDia das crianças, natal e outros eventos significativos.
+                            O projeto também presta auxílio a instituições filantrópicas, como asilos, creches e
+                            hospitais, com o objetivo de contribuir para suprir as necessidades básicas desses espaços.
+                            Realizamos doações de alimentos e itens de higiene e limpeza, visando apoiar essas
+                            instituições em sua importante missão.
+                        </p>
+                        <p>
+                            Durante as entregas dos itens, promovemos encontros musicais, contação de histórias, danças
+                            e brincadeiras, com a finalidade de proporcionar não apenas a entrega das doações, mas
+                            também momentos de alegria, entretenimento e diversão.
+                        </p>
+                        <p>
+                            Buscamos criar oportunidades para interação e descontração, tornando as experiências mais
+                            significativas para as pessoas beneficiadas.
+                        </p>
+                        <p>
+                            Através de nossas ações, pretendemos fazer a diferença na vida das pessoas,
+                            proporcionando-lhes um pouco de conforto material e momentos de alegria que possam renovar
+                            as energias e fortalecer os laços comunitários.
+                        </p>
+                        <p>
+                            Estamos empenhados em realizar esse trabalho de forma contínua, sempre com dedicação e
+                            empatia. Acreditamos que, juntos, podemos promover mudanças positivas em nossa comunidade e
+                            construir um futuro mais solidário e inclusivo para todos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ----- End Process Area ----- -->
+
+    <!-- ----- Start Parcerias ----- -->
+    <div class="client-logo">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-3 col-12 text-center">
+                    <div class="single-logo">
+                        <img src="{% static '/images/logo/logo-gerando-falcoes.png' %}" alt="Gerando Falcões">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----- End Parcerias  ----- -->
+
+    {% include 'footer.html' %}
+
+</body>
+
+</html>

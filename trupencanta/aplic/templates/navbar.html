@@ -1,7 +1,6 @@
 {% load static %}
 
 <!-- ----- Início Navbar ----- -->
-
 <header class="header navbar-area sticky">
     <div class="container">
         <div class="row align-items-center">
@@ -29,7 +28,8 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'sobre-nos' %}" class="dd-menu active collapsed" aria-label="Toggle navigation">Sobre Nós</a>
+                                    <a href="{% url 'sobre-nos' %}" class="dd-menu active collapsed"
+                                        aria-label="Toggle navigation">Sobre Nós</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{% url 'oficina' %}" aria-label="Toggle navigation">Oficinas</a>
@@ -39,8 +39,9 @@
                                     <ul class="sub-menu collapse" id="submenu-1-2">
                                         <li class="nav-item"><a href="{% url 'projeto-estacao-cultural' %}">Projeto
                                                 Estação Cultural</a></li>
-                                        <li class="nav-item"><a href="pricing.html">Projeto Circuito Cultural</a></li>
-                                        <li class="nav-item"><a href="pricing.html">Estação Trupe Solidária</a></li>
+                                        <li class="nav-item"><a href="{% url 'projeto-estacao-circuito-cultural' %}">Projeto Estação Circuito Cultural</a></li>
+                                        <li class="nav-item"><a href="{% url 'estacao-trupe-solidaria' %}">Estação Trupe
+                                                Solidária</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -60,5 +61,4 @@
         </div>
     </div>
 </header>
-
 <!-- ----- Fim Navbar ----- -->

@@ -1362,7 +1362,7 @@ blockquote span {
 }
 
 .button .btn-alt {
-  background-color: #DF5E34 !important;
+  background-color: #574138 !important;
   color: #fff !important;
 }
 
@@ -2795,7 +2795,7 @@ blockquote span {
 }
 
 .call-action.style2 {
-  background-color: #F4F7FA;
+  background-color: #DF5E34;
   padding: 0;
 }
 
@@ -2807,7 +2807,7 @@ blockquote span {
   position: relative;
   padding: 50px;
   border-radius: 10px;
-  background-color: #574138;
+  background-color: #DF5E34;
   z-index: 0;
   overflow: hidden;
 }
@@ -2868,12 +2868,12 @@ blockquote span {
 }
 
 .call-action .button .btn:hover {
-  background-color: #fd723b;
+  background-color: #574138;
   color: #fff;
 }
 
 .call-action .button .btn.btn-alt:hover {
-  background-color: #AB807F !important;
+  background-color: #000 !important;
 }
 
 @media (max-width: 767px) {
@@ -2940,7 +2940,7 @@ blockquote span {
   line-height: 65px;
   border-radius: 15px;
   color: #fff;
-  background-color: #DF5E34;
+  background-color: #AB807F;
   text-align: center;
   font-size: 30px;
   -webkit-box-shadow: 0px 10px 30px rgba(48, 128, 227, 0.18);
@@ -2959,7 +2959,7 @@ blockquote span {
 }
 
 .single-service a {
-  color: #DF5E34;
+  color: #AB807F;
   margin-top: 40px;
   display: inline-block;
   font-weight: 500;
@@ -4608,6 +4608,11 @@ sidebar */
 /*=============================
 	About App CSS
 ===============================*/
+
+.achievement{
+background-color: #f4f7fa;
+}
+
 @media (max-width: 767px) {
   .achievement .single-achievement {
     padding: 20px 0;
@@ -4658,7 +4663,7 @@ sidebar */
 ========================================*/
 .about {
   position: relative;
-  background-color: #fff;
+  background-color: #000;
   z-index: 0;
 }
 
@@ -5251,3 +5256,5 @@ sidebar */
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
 }
+
+

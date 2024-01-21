@@ -1,0 +1,137 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Estação Trupe Solidária</title>
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    <meta name="author" content="Augusto Sérgio">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/logo/trupencanta.png' %}" />
+
+    <!-- ----- Start CSS ----- -->
+    <link rel="stylesheet" href="{% static '/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/glightbox.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/LineIcons.3.0.css' %}">
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <link rel="stylesheet" href="{% static '/css/tiny-slider.css' %}">
+    <!-- ----- End CSS ----- -->
+
+</head>
+
+<body>
+
+    {% include 'navbar.html' %}
+
+    <!-- ----- Start Breadcrumbs ----- -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="breadcrumbs-content">
+                        <h1 class="page-title">Projeto Estação Circuito Cultural</h1>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <ul class="breadcrumb-nav">
+                        <li><a href="{% url 'index' %}">Página Inicial</a></li>
+                        <li>Projeto Estação Circuito Cultural</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----- End Breadcrumbs ----- -->
+
+    <!-- ----- Start Process Area ----- -->
+    <section class="process section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12 wow fadeInLeft" data-wow-delay=".4s"
+                    style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                    <img src="{% static '/images/8.jpeg' %}" alt="#"><br><br>
+                    <img src="{% static '/images/9.jpeg' %}" alt="#">
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="content">
+                        <h4 class="wow fadeInUp" data-wow-delay=".2s"
+                            style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">Sobre o
+                            Projeto</h4>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s"
+                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Projeto
+                            Estação Circuito<br>Cultural</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s"
+                            style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                            Com uma estrutura itinerante, o Circuito Cultural TrupEncanta tem como propósito levar
+                            informação, cultura e entretenimento para Além Paraíba e região. Nosso objetivo é
+                            transformar salas de cinema, teatros, casas de espetáculos e praças públicas em espaços
+                            culturais vibrantes, com apresentações, exposições e oficinas nas diversas áreas, como
+                            música, teatro, teatro de bonecos, capoeira, contação de histórias, artesanato, dança,
+                            origami, desenhos e aquarela, em diferentes bairros e praças da nossa cidade. É a Trupe
+                            saindo das suas paredes e indo ao encontro da comunidade.
+                        </p>
+                        <p>
+                            A expectativa é que os jovens, as famílias e, especialmente, as crianças aproveitem a
+                            oportunidade e se divirtam com essa proposta cultural.
+                        </p>
+                        <p>
+                            O evento ocorre sempre nos finais de semana, proporcionando maior interação e participação
+                            da população.
+                        </p>
+                        <p>
+                            Além disso, propomos a realização do Bazar Cultural, oferecendo produtos como roupas
+                            masculinas, femininas e infantis, malas, calçados, brinquedos, utensílios domésticos,
+                            bichinhos de pelúcia, bonés, bolsas, relógios, livros, entre outros.
+                        </p>
+                        <p>
+                            O espaço onde esses produtos são comercializados se transforma em um ambiente que reúne
+                            arte, música e gastronomia, inspirando bom gosto e criatividade, ao mesmo tempo que promove
+                            a conexão entre as pessoas e incentiva as atividades culturais da ONG.
+                        </p>
+                        <p>
+                            Através desse formato itinerante e diversificado, buscamos expandir o alcance da cultura,
+                            levando-a para além dos espaços tradicionais e tornando-a acessível a todos.
+                            Queremos proporcionar momentos enriquecedores e experiências culturais significativas para a
+                            comunidade local, promovendo o envolvimento e a participação ativa das pessoas.
+                        </p>
+                        <p>
+                            Ao unir arte, entretenimento, comércio e interação social, esperamos fortalecer os laços
+                            comunitários e valorizar a diversidade cultural presente em Além Paraíba.
+                            Estamos empolgados em oferecer essas oportunidades de engajamento cultural e estamos
+                            ansiosos para ver a comunidade se envolver e desfrutar dos eventos do Circuito Cultural
+                            TrupEncanta.
+                            Com essa abordagem inclusiva e itinerante, acreditamos que podemos contribuir para o
+                            enriquecimento da vida cultural de Além Paraíba e região.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ----- End Process Area ----- -->
+
+    <!-- ----- Start Parcerias ----- -->
+    <div class="client-logo">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-3 col-12 text-center">
+                    <div class="single-logo">
+                        <img src="{% static '/images/logo/logo-gerando-falcoes.png' %}" alt="Gerando Falcões">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----- End Parcerias  ----- -->
+
+    {% include 'footer.html' %}
+
+</body>
+
+</html>
