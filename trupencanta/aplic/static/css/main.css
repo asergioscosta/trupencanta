@@ -2621,8 +2621,8 @@ blockquote span {
 }
 
 .pricing-table .single-table.middle .table-head .title {
-  border-color: #DF5E34;
-  color: #DF5E34;
+  border-color: #EE9A61;
+  color: #EE9A61;
 }
 
 .pricing-table .single-table .table-head .title {
@@ -2940,7 +2940,7 @@ blockquote span {
   line-height: 65px;
   border-radius: 15px;
   color: #fff;
-  background-color: #AB807F;
+  background-color: #DF5E34;
   text-align: center;
   font-size: 30px;
   -webkit-box-shadow: 0px 10px 30px rgba(48, 128, 227, 0.18);
@@ -2959,7 +2959,7 @@ blockquote span {
 }
 
 .single-service a {
-  color: #AB807F;
+  color: #DF5E34;
   margin-top: 40px;
   display: inline-block;
   font-weight: 500;
@@ -2978,23 +2978,23 @@ blockquote span {
 }
 
 .single-service.two .service-icon {
-  background-color: #fd723b;
+  background-color: #ab807f;
   -webkit-box-shadow: 0px 10px 30px rgba(253, 114, 59, 0.25);
           box-shadow: 0px 10px 30px rgba(253, 114, 59, 0.25);
 }
 
 .single-service.two a {
-  color: #fd723b;
+  color: #ab807f;
 }
 
 .single-service.three .service-icon {
-  background-color: #FFA842;
+  background-color: #EE9A61;
   -webkit-box-shadow: 0px 10px 30px rgba(255, 168, 66, 0.26);
           box-shadow: 0px 10px 30px rgba(255, 168, 66, 0.26);
 }
 
 .single-service.three a {
-  color: #FFA842;
+  color: #EE9A61;
 }
 
 /*======================================
