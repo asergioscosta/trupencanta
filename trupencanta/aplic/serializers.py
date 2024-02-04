@@ -1,32 +1,6 @@
 from rest_framework import serializers
 
-from aplic.models import Projeto, Oficina, Noticia
-
-class ProjetoSerializer(serializers.ModelSerializer):
-    disciplinas = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='disciplina-detail')
-
-    class Meta:
-        model = Projeto
-        fields = (
-            'nome',
-            'imagem',
-            'descricao',
-            'resumo',
-        )
-
-class OficinaSerializer(serializers.ModelSerializer):
-    disciplinas = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='disciplina-detail')
-
-    class Meta:
-        model = Oficina
-        fields = (
-            'nome',
-            'imagem',
-            'descricao',
-            'resumo',
-            'dia_aulas',
-            'horario',
-        )
+from aplic.models import Projeto, Oficina, Noticia, Professor
 
 class NoticiaSerializer(serializers.ModelSerializer):
     disciplinas = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='disciplina-detail')
@@ -43,3 +17,41 @@ class NoticiaSerializer(serializers.ModelSerializer):
             'dia_aulas',
             'texto_noticia',
         )
+
+class OficinaSerializer(serializers.ModelSerializer):
+    disciplinas = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='disciplina-detail')
+
+    class Meta:
+        model = Oficina
+        fields = (
+            'nome',
+            'imagem',
+            'descricao',
+            'resumo',
+            'dia_aulas',
+            'horario',
+        )
+
+class ProjetoSerializer(serializers.ModelSerializer):
+    disciplinas = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='disciplina-detail')
+
+    class Meta:
+        model = Projeto
+        fields = (
+            'nome',
+            'imagem',
+            'descricao',
+            'resumo',
+        )
+
+class ProfessorSerializer(serializers.ModelSerializer):
+    professor = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='professor-detail')
+
+    class Meta:
+        model = Professor
+        fields = (
+            'imagem',
+            'formacao',
+            'cargo',
+        )
+

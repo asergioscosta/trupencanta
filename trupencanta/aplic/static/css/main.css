@@ -5173,25 +5173,33 @@ background-color: #f4f7fa;
 
 .team .single-team {
   margin-top: 30px;
+  border: 1px solid #eee;
   border-radius: 8px;
   overflow: hidden;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  text-align: center;
+}
+
+.team .single-team:hover {
+  -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.048);
+          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.048);
 }
 
 .team .single-team img {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  display: inline-block;
-  background-color: #fff;
-  padding: 10px;
-  border: 1px solid #eee;
+  width: 100%;
 }
 
 .team .single-team .content {
   padding: 40px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 767px) {
@@ -5203,26 +5211,16 @@ background-color: #f4f7fa;
 }
 
 .team .single-team .content h4 {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .team .single-team .content h4 span {
   color: #727272;
   font-size: 14px;
   display: block;
-  margin-top: 10px;
-  font-weight: 500;
-}
-
-.team .single-team .content .social {
-  display: block;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  margin-top: 5px;
+  font-weight: 400;
 }
 
 @media (max-width: 767px) {
@@ -5233,28 +5231,27 @@ background-color: #f4f7fa;
 
 .team .single-team .content .social li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .team .single-team .content .social li a {
-  font-size: 15px;
-  color: #081828;
+  height: 38px;
+  width: 38px;
+  line-height: 38px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #151515;
 }
 
 .team .single-team .content .social li a:hover {
   border-color: transparent;
-  color: #DF5E34;
+  color: #fff;
+  background-color: #3080E3;
 }
 
 .team .single-team .content .social li:last-child {
   margin-right: 0;
 }
-
-.team .single-team:hover .social {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
-}
-
-

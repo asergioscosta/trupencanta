@@ -1,8 +1,8 @@
 from django.views.generic import TemplateView
 from django.db.models import Q
-from aplic.serializers import ProjetoSerializer, OficinaSerializer, NoticiaSerializer
+from aplic.serializers import ProjetoSerializer, OficinaSerializer, NoticiaSerializer, ProfessorSerializer
 from rest_framework import viewsets, permissions
-from .models import Projeto, Oficina, Noticia
+from .models import Projeto, Oficina, Noticia, Professor
 from .forms import ContatoForm
 from django.contrib import messages
 from django.shortcuts import render
@@ -119,3 +119,23 @@ def saibamais(request, oficina_id):
 
 class SobreNosView(TemplateView):
     template_name = 'sobre-nos.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(SobreNosView, self).get_context_data(**kwargs)
+        
+        query = self.request.GET.get("iptText")
+        print(query)
+        
+        if (query is None):
+            context['professor'] = Professor.objects.order_by('id').all()
+        else:
+            context['professor'] = Professor.objects.filter(Q(nome__icontains=query))
+            context['professor'] = Professor.objects.filter(Q(curso__icontains=query))
+
+        return context
+
+class SobreNosViewSet(viewsets.ModelViewSet):
+    permission_classes = (permissions.DjangoModelPermissions, )
+
+    queryset = Professor.objects.all()
+    serializer_class = ProfessorSerializer

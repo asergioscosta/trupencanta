@@ -37,8 +37,9 @@ class Instituicao(models.Model):
         super().save(*args, **kwargs)
 
 class Professor(Pessoa):
+    imagem = models.ImageField(upload_to='Professor/')
     formacao = models.TextField(_('Formação'), max_length=255)
-
+    cargo = models.CharField(_('Cargo'), max_length=255)
     instituicao = models.ForeignKey(Instituicao, null = False, on_delete = models.CASCADE)
 
     class Meta:

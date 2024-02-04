@@ -25,7 +25,7 @@ class OficinaAdmin(admin.ModelAdmin):
     
 @admin.register(Professor)
 class ProfessorAdmin(admin.ModelAdmin):
-    list_display = ('formacao',) 
+    list_display = ('formacao', 'cargo', 'imagem') 
 
 @admin.register(Projeto)
 class ProjetoAdmin(admin.ModelAdmin):
